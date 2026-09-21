@@ -1,0 +1,149 @@
+/* index.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 2px solid #000;
+    position: fixed; top: 0px;
+    z-index: 999;
+    background: #fff;
+    width: 100%;
+}
+header h1 {}
+header h1 a {font-size: 1.5rem; font-weight: 800;}
+header .menu {
+    display: flex; gap: 20px;
+}
+header .menu a {
+    position: relative; 
+    transition: all 0.2s;
+    font-weight: 600;
+}
+header .menu a::after {
+    content: ''; display: block;
+    width: 100%; height: 3px;
+    position: absolute; bottom: -7px; left: 0;
+    background-color: black;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 0.4s;
+}
+header a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+main {}
+main .contents {
+    width: 100%;
+    height: 100vh;
+}
+main .contents .swiper-slide {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+/* ===================================================================== 1행 */
+main .contents #intro {
+    width: 100%; min-height: 1080px;
+    padding-top: 450px;
+    position: relative;
+}
+main section {height: 100vh;}
+main .contents #intro .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+main .contents #intro .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+main .contents #intro .title {
+    position: relative;
+    z-index: 300;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+main .contents #intro .title * {
+    color: #fff;
+}
+main .contents #intro .left {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+main .contents #intro .left p {
+    font-size: 3.125em;
+}
+main .contents #intro .left::after {
+    content: ''; display: block;
+    position: absolute;
+    width: 5px; height: 225px;
+    background-color: #fff;
+    top: 7px; right: -10px;
+}
+main .contents #intro .right {}
+main .contents #intro .right h1 {
+    font-size: 6.25em;
+    line-height: 0.75;
+}
+main .contents #intro .bg_btm {
+    position: absolute; bottom: 0; left: 0;
+    height: 220px; width: 100%;
+    background: rgba(0, 0, 0, 0.11);
+    z-index: 900;
+}
+/* ===================================================================== 2행 */
+main .contents #about_me {
+    background: #111;
+    padding: 120px 150px;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+main .contents #about_me * {color: #fff;}
+main .contents #about_me .profile {
+    display: flex; flex-flow: column nowrap;
+    gap: 40px;
+}
+main .contents #about_me .profile h1 {}
+main .contents #about_me .profile .introduce {}
+main .contents #about_me .profile .details {margin-bottom: 10px;}
+/* ===========================================================프로필 */
+main .contents #about_me .profile .photo_info {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+main .contents #about_me .profile .photo_info .profile_photo {width: 210px; height: 270px;}
+main .contents #about_me .profile .photo_info .profile_photo img {width: 100%;}
+main .contents #about_me .profile .photo_info .my_info {}
+main .contents #about_me .profile .photo_info .my_info dt {}
+main .contents #about_me .profile .photo_info .my_info dd {}
+/* ===========================================================교육 및 스킬 */
+/* =================================================교육 */
+main .contents #about_me .profile .edu_skill {}
+main .contents #about_me .profile .edu_skill .edu {}
+main .contents #about_me .profile .edu_skill .edu h2 {}
+main .contents #about_me .profile .edu_skill .edu p {}
+/* ================================================스킬 */
+main .contents #about_me .profile .edu_skill .skill_wrap {}
+main .contents #about_me .profile .edu_skill .skill_wrap h2 {}
+main .contents #about_me .profile .edu_skill .skill_wrap .skill {}
+main .contents #about_me .profile .edu_skill .skill_wrap .skill li {}
+main .contents #about_me .profile .edu_skill .skill_wrap .skill li .skill_thum {}
+main .contents #about_me .profile .edu_skill .skill_wrap .skill li .skill_thum img {}
+main .contents #about_me .profile .edu_skill .skill_wrap .skill li .skill_detail {}
