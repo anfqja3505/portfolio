@@ -7,6 +7,7 @@ html, body {
     height: 100%;
     min-width: 1600px;
 }
+body {margin: 0 auto;}
 header {
     display: flex;
     justify-content: space-between;
@@ -510,8 +511,8 @@ main .contents #project3 .scroll img {
 /* ===================================================footer */
 footer {
     background-color: #111 !important;
-    height: 100vh;
+    height: 40vh;
     
 }
 footer .thanks_wrap {}
-footer .thanks_wrap p {font-size: 7rem;}
+footer .thanks_wrap p {font-size: 12rem;}
