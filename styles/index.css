@@ -230,6 +230,7 @@ main .contents #about_me .scroll img {
     width: 18px;
     animation: scrollArrow 1s linear infinite alternate;
 }
+
 /* ================================================================프로젝트1 */
 main .contents #project1 {
     display: flex;
@@ -309,7 +310,20 @@ main .contents #project1 .project_detail .project_link button a {
     font-weight: 700;
     font-size: 1.125rem;
 }
-
+main .contents #project1 .scroll {
+    position: absolute; bottom: 40px; right: 22%; 
+    transform: translateX(-50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+main .contents #project1 .scroll img {
+    width: 18px;
+    animation: scrollArrow 1s linear infinite alternate;
+}
 /* ================================================================프로젝트2 */
 main .contents #project2 {
     display: flex;
@@ -322,7 +336,7 @@ main .contents #project2 .project_img {
     width: 100%; height: 100%;
     background-image: url(../images/mockup/mockup_milk_touch.jpg);
     background-repeat: no-repeat;
-    background-position: -220px center;
+    background-position: -230px center;
     background-size: cover;
     flex: 1;
 }
@@ -386,7 +400,21 @@ main .contents #project2 .project_detail .project_link button {
     font-weight: 700;
     font-size: 1.125rem;
 }
-
+main .contents #project2 .scroll {
+    position: absolute; bottom: 40px; left: 22%; 
+    transform: translateX(-50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+main .contents #project2 .scroll img {
+    width: 18px;
+    animation: scrollArrow 1s linear infinite alternate;
+    filter: invert(1);
+}
 /* ================================================================프로젝트3 */
 main .contents #project3 {
     display: flex;
@@ -398,7 +426,7 @@ main .contents #project3 .project_img {
     width: 100%; height: 100%;
     background-image: url(../images/mockup/mockup_adlv.jpg);
     background-repeat: no-repeat;
-    background-position: -220px center;
+    background-position: -230px center;
     background-size: cover;
     flex: 1;
 }
@@ -460,4 +488,18 @@ main .contents #project3 .project_detail .project_link button {
     color: #000;
     font-weight: 700;
     font-size: 1.125rem;
+}
+main .contents #project3 .scroll {
+    position: absolute; bottom: 40px; right: 22%; 
+    transform: translateX(-50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+main .contents #project3 .scroll img {
+    width: 18px;
+    animation: scrollArrow 1s linear infinite alternate;
 }
