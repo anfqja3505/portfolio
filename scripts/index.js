@@ -51,7 +51,7 @@ gsap.fromTo("#project1 .project_detail > *",
         stagger: 0.15, 
         scrollTrigger: { 
             trigger: "#project1", 
-            start: "top 85%" 
+            start: "top 40%" 
         } 
     }
 );
@@ -66,7 +66,7 @@ gsap.fromTo("#project2 .project_detail > *",
         stagger: 0.15, 
         scrollTrigger: { 
             trigger: "#project2", 
-            start: "top 85%" 
+            start: "top 40%" 
         } 
     }
 );
@@ -81,7 +81,7 @@ gsap.fromTo("#project3 .project_detail > *",
         stagger: 0.15, 
         scrollTrigger: { 
             trigger: "#project3", 
-            start: "top 85%" 
+            start: "top 40%" 
         } 
     }
 );
