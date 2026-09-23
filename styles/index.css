@@ -44,6 +44,7 @@ header a:hover::after {
     transform: scaleX(1);
 }
 main {}
+main .wrap {height: 100vh;}
 main .contents {
     width: 100%;
 }
@@ -78,7 +79,9 @@ main .contents #intro .video video {
     filter: brightness(0.3);
 }
 main .contents #intro .title {
-    position: relative;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 300;
     display: flex;
     gap: 10px;
@@ -141,17 +144,18 @@ main .contents #about_me .profile h1 {
     font-size: 2rem; font-weight: 700;
 }
 main .contents #about_me .profile .introduce {
-    font-size: 1.375rem; font-weight: 700; 
+    font-size: 1.375rem; font-weight: 400; 
     width: 518px; 
     line-height: 1.5; 
     letter-spacing: -0.02em;
 }
 main .contents #about_me .profile .introduce em {
-    font-size: 1.5rem; font-weight: 800;
+    font-size: 1.5rem; font-weight: 500;
 }
 main .contents #about_me .profile .details {
     margin-bottom: 10px; 
     font-size: 1.125rem; 
+    font-weight: 300;
     line-height: 1.8; 
     width: 518px;
 }
@@ -177,11 +181,11 @@ main .contents #about_me .profile .photo_info .my_info li {
     align-items: center;
 }
 main .contents #about_me .profile .photo_info .my_info li h3 {
-    font-size: 1.25rem; font-weight: 500;
-    width: 100px;
+    font-size: 1.125rem; font-weight: 500;
+    width: 80px;
 }
 main .contents #about_me .profile .photo_info .my_info li p {
-    font-size: 1.125rem; font-weight: 500;
+    font-size: 1rem; font-weight: 300;
 }
 /* ===========================================================교육 및 스킬 */
 /* =================================================교육 */
@@ -194,7 +198,7 @@ main .contents #about_me .edu_skill .edu h2 {
     margin-bottom: 50px;
 }
 main .contents #about_me .edu_skill .edu p {
-    margin-bottom: 25px;
+    margin-bottom: 25px; font-weight: 300;
 }
 /* ================================================스킬 */
 main .contents #about_me .edu_skill .skill_wrap {}
@@ -214,7 +218,7 @@ main .contents #about_me .edu_skill .skill_wrap .skill li {
 }
 main .contents #about_me .edu_skill .skill_wrap .skill li .skill_thum {}
 main .contents #about_me .edu_skill .skill_wrap .skill li .skill_thum img {}
-main .contents #about_me .edu_skill .skill_wrap .skill li .skill_detail {}
+main .contents #about_me .edu_skill .skill_wrap .skill li .skill_detail {line-height: 1.5;}
 /* ===================================================스크롤 */
 main .contents #about_me .scroll {
     position: absolute; bottom: 40px; left: 50%; 
@@ -243,7 +247,7 @@ main .contents #project1 .project_img {
     width: 100%; height: 100%;
     background-image: url(../images/mockup/mockup_yg_select.jpg);
     background-repeat: no-repeat;
-    background-position: -220px center;
+    background-position: -230px center;
     background-size: cover;
     flex: 1;
 }
@@ -305,11 +309,19 @@ main .contents #project1 .project_detail .project_link button {
     color: #000;
     font-weight: 700;
     font-size: 1.125rem;
+    transition: all 0.3s;
 }
 main .contents #project1 .project_detail .project_link button a {
     color: #000;
     font-weight: 700;
     font-size: 1.125rem;
+    display: block;
+    height: 100%;
+    line-height: 54px;
+}
+main .contents #project1 .project_detail .project_link button:hover {background-color: #000;}
+main .contents #project1 .project_detail .project_link button:hover a {
+    color: #fff;
 }
 main .contents #project1 .scroll {
     position: absolute; bottom: 40px; right: 22%; 
@@ -337,7 +349,7 @@ main .contents #project2 .project_img {
     width: 100%; height: 100%;
     background-image: url(../images/mockup/mockup_milk_touch.jpg);
     background-repeat: no-repeat;
-    background-position: -230px center;
+    background-position: -220px center;
     background-size: cover;
     flex: 1;
 }
@@ -400,6 +412,11 @@ main .contents #project2 .project_detail .project_link button {
     color: #000;
     font-weight: 700;
     font-size: 1.125rem;
+    transition: all 0.3s;
+}
+main .contents #project2 .project_detail .project_link button:hover {background-color: #000;}
+main .contents #project2 .project_detail .project_link button:hover a {
+    color: #fff;
 }
 main .contents #project2 .scroll {
     position: absolute; bottom: 40px; left: 22%; 
@@ -410,6 +427,14 @@ main .contents #project2 .scroll {
     justify-content: center;
     align-items: center;
     gap: 5px;
+}
+main .contents #project2 .project_detail .project_link button a {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.125rem;
+    display: block;
+    height: 100%;
+    line-height: 54px;
 }
 main .contents #project2 .scroll img {
     width: 18px;
@@ -489,6 +514,19 @@ main .contents #project3 .project_detail .project_link button {
     color: #000;
     font-weight: 700;
     font-size: 1.125rem;
+    transition: all 0.3s;
+}
+main .contents #project3 .project_detail .project_link button a {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.125rem;
+    display: block;
+    height: 100%;
+    line-height: 54px;
+}
+main .contents #project3 .project_detail .project_link button:hover {background-color: #000;}
+main .contents #project3 .project_detail .project_link button:hover a {
+    color: #fff;
 }
 main .contents #project3 .scroll {
     position: absolute; bottom: 40px; right: 22%; 
@@ -505,14 +543,35 @@ main .contents #project3 .scroll img {
     animation: scrollArrow 1s linear infinite alternate;
 }
 
+/* =================================================== Graphic */
 
+main .graphic {height: 100vh;}
+main .graphic .graphic_wrap {}
+main .graphic .graphic_wrap h2 {font-size: 6rem;}
+main .graphic .graphic_wrap .graphic_group {
+    background-color: #111;
+    padding: 150px 0;
+}
+/* ==============================================================이벤트배너 */
+main .graphic .graphic_wrap .graphic_group .graphic_poster {height: 300px;}
+main .graphic .graphic_wrap .graphic_group .graphic_poster .swiper-wrapper {}
+main .graphic .graphic_wrap .graphic_group .graphic_poster .swiper-wrapper li {background-color: #111;}
+main .graphic .graphic_wrap .graphic_group .graphic_poster .swiper-wrapper li img {}
+/* ==============================================================상세페이지 */
+main .graphic .graphic_wrap .graphic_group .graphic_detail {}
+main .graphic .graphic_wrap .graphic_group .graphic_detail .swiper-wrapper {height: 300px;}
+main .graphic .graphic_wrap .graphic_group .graphic_detail .swiper-wrapper li {background-color: #111;}
+main .graphic .graphic_wrap .graphic_group .graphic_detail .swiper-wrapper li img {}
 
-
-/* ===================================================footer */
+/* =================================================== Footer */
 footer {
-    background-color: #111 !important;
+    background-color: #111;
     height: 40vh;
-    
 }
 footer .thanks_wrap {}
-footer .thanks_wrap p {font-size: 12rem;}
+footer .thanks_wrap p {
+    font-size: 12rem; 
+    font-weight: 600;
+    color: #fff; 
+    line-height: 0.8; 
+}

@@ -6,10 +6,10 @@ gsap.from("#about_me .profile > *", {
         trigger: "#about_me",
         start: "top 60%",
     },
-    y: -50,
+    y: -70,
     opacity: 0,
-    duration: 1,
-    stagger: 0.2,
+    duration: 1.2,
+    stagger: 0.3,
 });
 
 gsap.from("#about_me .edu_skill > div", {
@@ -17,25 +17,25 @@ gsap.from("#about_me .edu_skill > div", {
         trigger: "#about_me .edu_skill",
         start: "top 65%",
     },
-    y: -50,
+    y: -70,
     opacity: 0,
-    duration: 1,
-    stagger: 0.3,
+    duration: 1.2,
+    stagger: 0.4,
 });
 
 gsap.from("#about_me .skill li", {
     scrollTrigger: {
         trigger: "#about_me .skill",
-        start: "top 70%",
+        start: "top 90%",
     },
-    x: -30,
+    x: -50,
     opacity: 0,
-    duration: 1,
-    stagger: 0.1,
+    duration: 1.2,
+    stagger: 0.2,
 });
 
 gsap.to("#about_me .scroll img", {
-    y: -20,
+    y: -50,
     repeat: -1,
     duration: 1 ,
 });
@@ -47,8 +47,8 @@ gsap.fromTo("#project1 .project_detail > *",
     { 
         x: 0, 
         opacity: 1, 
-        duration: 0.8, 
-        stagger: 0.15, 
+        duration: 1.2, 
+        stagger: 0.2, 
         scrollTrigger: { 
             trigger: "#project1", 
             start: "top 40%" 
@@ -62,8 +62,8 @@ gsap.fromTo("#project2 .project_detail > *",
     { 
         x: 0, 
         opacity: 1, 
-        duration: 0.8, 
-        stagger: 0.15, 
+        duration: 1.2, 
+        stagger: 0.2, 
         scrollTrigger: { 
             trigger: "#project2", 
             start: "top 40%" 
@@ -77,11 +77,21 @@ gsap.fromTo("#project3 .project_detail > *",
     { 
         x: 0, 
         opacity: 1, 
-        duration: 0.8, 
-        stagger: 0.15, 
+        duration: 1.2, 
+        stagger: 0.2, 
         scrollTrigger: { 
             trigger: "#project3", 
             start: "top 40%" 
         } 
     }
 );
+
+//스와이프
+
+const graphic_poster = new Swiper ('graphic_poster',{
+    
+})
+
+const graphic_detail = new Swiper ('graphic_detail',{
+
+})
