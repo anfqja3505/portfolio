@@ -1,21 +1,5 @@
 // portfolio | index.js
 
-//스와이프
-const graphic_poster_swiper = new Swiper('.graphic_poster',{
-    slidesPerView: "auto",
-    spaceBetween:15,
-    centeredSlides: true,
-    speed:4000,
-    autoplay:{
-        delay: 0,
-        disableOnInteraction: false,
-    },
-    loop:true,
-    freeMode: {
-    enabled: true,
-    momentum: false,
-    },
-})
 
 //스크롤 트리거
 gsap.registerPlugin(ScrollTrigger);
@@ -145,12 +129,55 @@ gsap.fromTo("#project3 .project_img > *",
         } 
     }
 );
-//스와이프
 
-const graphic_poster = new Swiper ('graphic_poster',{
-    
+//그래픽 
+const graphic_poster_swiper = new Swiper('.graphic_poster',{
+    slidesPerView: "auto",
+    spaceBetween:15,
+    centeredSlides: true,
+    speed:4000,
+    autoplay:{
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    loop:true,
+    freeMode: {
+    enabled: true,
+    momentum: false,
+    },
 })
 
-const graphic_detail = new Swiper ('graphic_detail',{
+const modal = document.querySelector(".image_full");
+const modalImg = document.querySelector(".img_full_content");
+const closeBtn = document.querySelector(".full_close_btn");
+const slides = document.querySelectorAll(".graphic_poster .swiper-slide");
 
-})
+slides.forEach(slide => {
+    slide.addEventListener("click", function() {
+        const fullImageSrc = this.getAttribute("data-full");
+        if (fullImageSrc) {
+            modal.style.display = "flex";
+            modalImg.src = fullImageSrc;
+            document.body.style.overflow = "hidden";
+            if (graphic_poster_swiper.autoplay) {
+                graphic_poster_swiper.autoplay.start();
+            }
+        }
+    });
+});
+
+function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+    if (graphic_poster_swiper.autoplay) {
+        graphic_poster_swiper.autoplay.start();
+    }
+}
+
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
