@@ -1,4 +1,23 @@
 // portfolio | index.js
+
+//스와이프
+const graphic_poster_swiper = new Swiper('.graphic_poster',{
+    slidesPerView: "auto",
+    spaceBetween:15,
+    centeredSlides: true,
+    speed:4000,
+    autoplay:{
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    loop:true,
+    freeMode: {
+    enabled: true,
+    momentum: false,
+    },
+})
+
+//스크롤 트리거
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from("#about_me .profile > *", {
@@ -49,6 +68,7 @@ gsap.fromTo("#project1 .project_detail > *",
         opacity: 1, 
         duration: 1.2, 
         stagger: 0.2, 
+        toggleActions: "restart none none restart",
         scrollTrigger: { 
             trigger: "#project1", 
             start: "top 40%" 
@@ -56,12 +76,13 @@ gsap.fromTo("#project1 .project_detail > *",
     }
 );
 gsap.fromTo("#project1 .project_img > *", 
-    { y: -70, opacity: 0 }, 
+    { y: -100, opacity: 0 }, 
     { 
         y: 0, 
         opacity: 1, 
         duration: 0.8, 
         stagger: 0.2, 
+        toggleActions: "restart none none restart",
         scrollTrigger: { 
             trigger: "#project1", 
             start: "top 40%" 
@@ -84,7 +105,7 @@ gsap.fromTo("#project2 .project_detail > *",
     }
 );
 gsap.fromTo("#project2 .project_img > *", 
-    { y: -70, opacity: 0 }, 
+    { y: -100, opacity: 0 }, 
     { 
         y: 0, 
         opacity: 1, 
@@ -112,7 +133,7 @@ gsap.fromTo("#project3 .project_detail > *",
     }
 );
 gsap.fromTo("#project3 .project_img > *", 
-    { y: -70, opacity: 0 }, 
+    { y: -100, opacity: 0 }, 
     { 
         y: 0, 
         opacity: 1, 
