@@ -245,11 +245,38 @@ main .contents #project1 {
 main .contents #project1 * {color: #fff;}
 main .contents #project1 .project_img {
     width: 100%; height: 100%;
-    background-image: url(../images/mockup/mockup_yg_select.jpg);
+    background-image: url(../images/mockup/mockup_bg.jpg);
     background-repeat: no-repeat;
     background-position: -230px center;
     background-size: cover;
     flex: 1;
+    position: relative;
+}
+main .contents #project1 .project_img .yg_d {
+    width: 750px; height: 1500px; 
+    z-index: 30;
+    right: 0; top: 30%;
+}
+main .contents #project1 .project_img .yg_t {
+    width: 500px; height: 1000px; 
+    z-index: 10; top: 20%; left: -30px;
+    
+}
+main .contents #project1 .project_img .yg_m {
+    width: 300px; height: 600px; 
+    z-index: 20; top: 41%; left: -30px;
+}
+
+main .contents #project1 .project_img .yg_d,
+main .contents #project1 .project_img .yg_t,
+main .contents #project1 .project_img .yg_m {
+    position: absolute;
+}
+
+main .contents #project1 .project_img .yg_d img,
+main .contents #project1 .project_img .yg_t img,
+main .contents #project1 .project_img .yg_m img{
+    width: 100%;
 }
 main .contents #project1 .project_detail {
     display: flex; flex-flow: column nowrap; 
@@ -347,11 +374,38 @@ main .contents #project2 {
 main .contents #project2 * {color: #000;}
 main .contents #project2 .project_img {
     width: 100%; height: 100%;
-    background-image: url(../images/mockup/mockup_milk_touch.jpg);
+    background-image: url(../images/mockup/mockup_bg.jpg);
     background-repeat: no-repeat;
     background-position: -220px center;
     background-size: cover;
     flex: 1;
+    position: relative;
+}
+main .contents #project2 .project_img .mt_d {
+    width: 750px; height: 1500px; 
+    z-index: 30;
+    right: 0; top: 30%;
+}
+main .contents #project2 .project_img .mt_t {
+    width: 500px; height: 1000px; 
+    z-index: 10; top: 20%; left: -30px;
+    
+}
+main .contents #project2 .project_img .mt_m {
+    width: 300px; height: 600px; 
+    z-index: 20; top: 41%; left: -30px;
+}
+
+main .contents #project2 .project_img .mt_d,
+main .contents #project2 .project_img .mt_t,
+main .contents #project2 .project_img .mt_m {
+    position: absolute;
+}
+
+main .contents #project2 .project_img .mt_d img,
+main .contents #project2 .project_img .mt_t img,
+main .contents #project2 .project_img .mt_m img{
+    width: 100%;
 }
 main .contents #project2 .project_detail {
     display: flex; flex-flow: column nowrap; 
@@ -449,12 +503,39 @@ main .contents #project3 {
 }
 main .contents #project3 * {color: #fff;}
 main .contents #project3 .project_img {
-    width: 100%; height: 100%;
-    background-image: url(../images/mockup/mockup_adlv.jpg);
+    width: 100%; height: 100%;  
+    background-image: url(../images/mockup/mockup_bg.jpg);
     background-repeat: no-repeat;
     background-position: -230px center;
     background-size: cover;
     flex: 1;
+    position: relative;
+}
+main .contents #project3 .project_img .ad_d {
+    width: 750px; height: 1500px; 
+    z-index: 30;
+    right: 0; top: 30%;
+}
+main .contents #project3 .project_img .ad_t {
+    width: 500px; height: 1000px; 
+    z-index: 10; top: 20%; left: -30px;
+    
+}
+main .contents #project3 .project_img .ad_m {
+    width: 300px; height: 600px; 
+    z-index: 20; top: 41%; left: -50px;
+}
+
+main .contents #project3 .project_img .ad_d,
+main .contents #project3 .project_img .ad_t,
+main .contents #project3 .project_img .ad_m {
+    position: absolute;
+}
+
+main .contents #project3 .project_img .ad_d img,
+main .contents #project3 .project_img .ad_t img,
+main .contents #project3 .project_img .ad_m img{
+    width: 100%;
 }
 main .contents #project3 .project_detail {
     display: flex; flex-flow: column nowrap; 
