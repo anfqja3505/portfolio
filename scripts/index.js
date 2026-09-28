@@ -181,3 +181,29 @@ modal.addEventListener("click", function(e) {
         closeModal();
     }
 });
+
+gsap.fromTo(".graphic_wrap > h2", 
+    { y: -100, opacity: 0 }, 
+    { 
+        y: 0, 
+        opacity: 1, 
+        duration: 0.8, 
+        scrollTrigger: { 
+            trigger: ".graphic", 
+            start: "top 40%" 
+        } 
+    }
+);
+gsap.fromTo(".graphic_wrap > p", 
+    { y: -100, opacity: 0 }, 
+    { 
+        y: 0, 
+        opacity: 1, 
+        duration: 0.8,
+        delay:0.2, 
+        scrollTrigger: { 
+            trigger: ".graphic", 
+            start: "top 40%" 
+        } 
+    }
+);
