@@ -131,47 +131,25 @@ gsap.fromTo("#project3 .project_img > *",
 );
 
 //그래픽 
-const graphic_poster_swiper = new Swiper('.graphic_poster',{
-    slidesPerView: "auto",
-    spaceBetween:15,
-    centeredSlides: true,
-    speed:4000,
-    autoplay:{
-        delay: 0,
-        disableOnInteraction: false,
-    },
-    loop:true,
-    freeMode: {
-    enabled: true,
-    momentum: false,
-    },
-})
-
 const modal = document.querySelector(".image_full");
 const modalImg = document.querySelector(".img_full_content");
 const closeBtn = document.querySelector(".full_close_btn");
-const slides = document.querySelectorAll(".graphic_poster .swiper-slide");
+const posterItems = document.querySelectorAll(".poster_item");
 
-slides.forEach(slide => {
-    slide.addEventListener("click", function() {
+posterItems.forEach(item => {
+    item.addEventListener("click", function() {
         const fullImageSrc = this.getAttribute("data-full");
         if (fullImageSrc) {
             modal.style.display = "flex";
             modalImg.src = fullImageSrc;
-            document.body.style.overflow = "hidden";
-            if (graphic_poster_swiper.autoplay) {
-                graphic_poster_swiper.autoplay.start();
-            }
+            document.body.style.overflow = "hidden"; // 배경 스크롤 방지
         }
     });
 });
 
 function closeModal() {
     modal.style.display = "none";
-    document.body.style.overflow = "auto";
-    if (graphic_poster_swiper.autoplay) {
-        graphic_poster_swiper.autoplay.start();
-    }
+    document.body.style.overflow = "auto"; // 배경 스크롤 복구
 }
 
 closeBtn.addEventListener("click", closeModal);
