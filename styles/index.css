@@ -625,26 +625,26 @@ main .contents #project3 .scroll img {
 }
 
 /* =================================================== Graphic */
-main .graphic {
+main #graphic {
     height: 110vh !important;
 }
-main .graphic .graphic_wrap {
+main #graphic .graphic_wrap {
     padding: 120px 0;
 }
-main .graphic .graphic_wrap h2 {
+main #graphic .graphic_wrap h2 {
     font-size: 2.5rem; 
     text-align: center; 
     margin-bottom: 7px;
 }
-main .graphic .graphic_wrap > p {
+main #graphic .graphic_wrap > p {
     font-size: 0.875rem; 
     text-align: center; 
     margin-bottom: 30px;
 }
-main .graphic .graphic_wrap .graphic_group {
+main #graphic .graphic_wrap .graphic_group {
     padding: 50px 0;
 }
-main .graphic .graphic_wrap .graphic_group .graphic_poster {
+main #graphic .graphic_wrap .graphic_group .graphic_poster {
     width: 100%;
     position: relative;
     overflow: hidden;
