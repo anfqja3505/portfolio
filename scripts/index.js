@@ -132,15 +132,15 @@ gsap.fromTo("#project3 .project_img > *",
 
 //그래픽 
 const graphicSwiper = new Swiper('.graphic_poster', {
-    slidesPerView: 'auto', 
-    spaceBetween: 20,    
-    freeMode: true,        
-    loop:true,
-    speed:2000,
-    centeredSlides:true,
-    autoplay:{
-        delay:2000,
-    }
+    slidesPerView: 4, 
+    spaceBetween: 20,         
+    loop: true,
+    speed: 4000,
+    centeredSlides: true,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false, 
+    },
 });
 
 const slides = document.querySelectorAll('.graphic_poster .swiper-slide');

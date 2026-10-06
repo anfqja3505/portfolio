@@ -651,11 +651,10 @@ main #graphic .graphic_wrap .graphic_group .graphic_poster {
     background-color: #111;
     padding: 70px 0;
 }
+.graphic_poster .swiper-wrapper {transition-timing-function: linear;}
 .graphic_poster .swiper-slide {
-    width: 400px !important;
-    height: 500px !important;
     flex-shrink: 0;
-    cursor: pointer !important;
+    cursor: pointer;
 }
 .graphic_poster .swiper-slide img {
     width: 100%;
