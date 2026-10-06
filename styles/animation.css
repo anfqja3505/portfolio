@@ -3,12 +3,3 @@
     0% {transform: translateY(0);}
     100% {transform: translateY(15px);}
 }
-
-@keyframes marqueeRolling {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}

@@ -131,34 +131,44 @@ gsap.fromTo("#project3 .project_img > *",
 );
 
 //그래픽 
-const modal = document.querySelector(".image_full");
-const modalImg = document.querySelector(".img_full_content");
-const closeBtn = document.querySelector(".full_close_btn");
-const posterItems = document.querySelectorAll(".poster_item");
+const graphicSwiper = new Swiper('.graphic_poster', {
+    slidesPerView: 'auto', 
+    spaceBetween: 20,    
+    freeMode: true,        
+    loop:true,
+    speed:2000,
+    centeredSlides:true,
+    autoplay:{
+        delay:2000,
+    }
+});
 
-posterItems.forEach(item => {
-    item.addEventListener("click", function() {
-        const fullImageSrc = this.getAttribute("data-full");
-        if (fullImageSrc) {
-            modal.style.display = "flex";
-            modalImg.src = fullImageSrc;
-            document.body.style.overflow = "hidden"; // 배경 스크롤 방지
+const slides = document.querySelectorAll('.graphic_poster .swiper-slide');
+const imageFull = document.querySelector('.image_full');
+const imgFullContent = document.querySelector('.img_full_content');
+const fullCloseBtn = document.querySelector('.full_close_btn');
+
+slides.forEach(slide => {
+    slide.addEventListener('click', function() {
+        const fullSrc = this.getAttribute('data-full');
+        if (fullSrc) {
+            imgFullContent.setAttribute('src', fullSrc);
+            imageFull.classList.add('active');
         }
     });
 });
 
-function closeModal() {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto"; // 배경 스크롤 복구
-}
+fullCloseBtn.addEventListener('click', function() {
+    imageFull.classList.remove('active');
+});
 
-closeBtn.addEventListener("click", closeModal);
-
-modal.addEventListener("click", function(e) {
-    if (e.target === modal) {
-        closeModal();
+imageFull.addEventListener('click', function(e) {
+    if (e.target === imageFull) {
+        imageFull.classList.remove('active');
     }
 });
+
+
 
 gsap.fromTo(".graphic_wrap > h2", 
     { y: -100, opacity: 0 }, 

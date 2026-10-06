@@ -625,44 +625,45 @@ main .contents #project3 .scroll img {
 }
 
 /* =================================================== Graphic */
-main .graphic {height: 110vh !important;}
-main .graphic .graphic_wrap {padding: 120px 0;}
-main .graphic .graphic_wrap h2 {font-size: 2.5rem; text-align: center; margin-bottom: 7px;}
-main .graphic .graphic_wrap > p {font-size: 0.875rem; text-align: center; margin-bottom: 30px;}
+main .graphic {
+    height: 110vh !important;
+}
+main .graphic .graphic_wrap {
+    padding: 120px 0;
+}
+main .graphic .graphic_wrap h2 {
+    font-size: 2.5rem; 
+    text-align: center; 
+    margin-bottom: 7px;
+}
+main .graphic .graphic_wrap > p {
+    font-size: 0.875rem; 
+    text-align: center; 
+    margin-bottom: 30px;
+}
 main .graphic .graphic_wrap .graphic_group {
     padding: 50px 0;
 }
-
-/* ==============================================================이벤트배너 */
 main .graphic .graphic_wrap .graphic_group .graphic_poster {
     width: 100%;
-    overflow: hidden;
     position: relative;
-    display: flex;
-}
-main .graphic .graphic_wrap .graphic_group .graphic_poster .graphic_track {
-    display: flex;
-    gap: 15px;
-    width: max-content;
-    list-style: none;
-    padding: 70px 0;
-    margin: 0;
+    overflow: hidden;
     background-color: #111;
-    animation: marqueeRolling 40s linear infinite;
+    padding: 70px 0;
 }
-main .graphic .graphic_wrap .graphic_group .graphic_poster .graphic_track li {
-    width: 400px;
-    height: 500px;
+.graphic_poster .swiper-slide {
+    width: 400px !important;
+    height: 500px !important;
     flex-shrink: 0;
-    cursor: pointer;
+    cursor: pointer !important;
 }
-main .graphic .graphic_wrap .graphic_group .graphic_poster .graphic_track li img {
+.graphic_poster .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: auto !important;
+    cursor: pointer !important;
 }
-
-/* ==============================================================확대이미지 */
 .image_full {
     display: none;
     position: fixed;
@@ -674,6 +675,9 @@ main .graphic .graphic_wrap .graphic_group .graphic_poster .graphic_track li img
     background-color: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
+}
+.image_full.active {
+    display: flex;
 }
 .img_full_content {
     max-width: 80%;
